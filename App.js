@@ -45,7 +45,7 @@ export default class ToDoApp extends React.Component {
   addNote() {
     if (this.state.noteText) {
       var d = new Date();
-      this.state.noteArray.push( {'date': d.getDate()+'/'+d.getMonth()+'/'+d.getFullYear(), 'note': this.state.noteText} );
+      this.state.noteArray.push( {'date': d.getDate()+'/'+(d.getMonth()+1)+'/'+d.getFullYear(), 'note': this.state.noteText} );
       this.setState({noteArray: this.state.noteArray});
       this.setState({noteText: ''});
     }
