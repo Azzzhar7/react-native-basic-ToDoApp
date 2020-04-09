@@ -11,14 +11,18 @@ import {
 import Note from './App/Components/Note';
 
 export default class ToDoApp extends React.Component {
+  
   state = {
     noteArray: [{'date': '07/04/2020', 'note': 'Hello world!'}],
     noteText: '',
   }
+
   render() {
+    
     let notes = this.state.noteArray.map((val, key) => {
       return <Note key={key} keyval={key} val={val} deleteMethod={()=>this.deleteNote(key)} />
     });
+      
     return (
       <View style={styles.container}>
         <View style={styles.header}>
@@ -43,16 +47,23 @@ export default class ToDoApp extends React.Component {
   }
 
   addNote() {
+    
     if (this.state.noteText) {
+      
       var d = new Date();
       this.state.noteArray.push( {'date': d.getDate()+'/'+(d.getMonth()+1)+'/'+d.getFullYear(), 'note': this.state.noteText} );
       this.setState({noteArray: this.state.noteArray});
       this.setState({noteText: ''});
+      
     }
+    
   }
+
   deleteNote(key) {
+    
     this.state.noteArray.splice(key, 1);
     this.setState({noteArray: this.state.noteArray});
+    
   }
 
 }
