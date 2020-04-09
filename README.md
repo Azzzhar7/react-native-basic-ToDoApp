@@ -10,4 +10,5 @@ npm start OR expo start
 
 # Prerequisites
 Node >= v.12
+
 Expo CLI
