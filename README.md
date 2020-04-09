@@ -12,3 +12,7 @@ npm start OR expo start
 Node >= v.12
 
 Expo CLI
+
+# Output
+
+![](OUTPUT-react-native-basic-to-do-application.jpg)
